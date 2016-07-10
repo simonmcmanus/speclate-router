@@ -1,2 +1,2 @@
 # speclate-router
-experimental client side router for speclate.
+Client side router for speclate.
