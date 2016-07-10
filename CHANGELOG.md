@@ -1,0 +1,14 @@
+
+
+# 1.0.0
+
+removing test command [view commit](http://github.com/$3/$4/commit/9053eb64b3b40d1bd97cb06f1be220b136d92bfa)
+readme desc [view commit](http://github.com/$3/$4/commit/11c4a567dc271a9d96d536a062e53545911bd4c5)
+removed commented out code and removed experimental flag. [view commit](http://github.com/$3/$4/commit/0bb64d1e231905f01c279e18b4c48eb80e101846)
+ignore npm debg [view commit](http://github.com/$3/$4/commit/2949f6273636d688229acad0af147b7c9a3e8428)
+removing log [view commit](http://github.com/$3/$4/commit/4eb51642fb6435654548aeca4d83f1674d26d661)
+simplied index [view commit](http://github.com/$3/$4/commit/c0cf7e96053424e0eae69ed382f2d6d2abc824d0)
+adding speclate router [view commit](http://github.com/$3/$4/commit/d7408bfc2064ca82d81987b61b9a633cb4a3c1d6)
+Initial commit [view commit](http://github.com/$3/$4/commit/1575bd91e00c163df737ee4849074c5ea3080127)
+
+
