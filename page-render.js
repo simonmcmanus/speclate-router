@@ -34,9 +34,6 @@ module.exports = function (page, callback) {
     sizlate.render($('html'), {
       '#container': data.pageLayout
     })
-
-    // components have not been renedered here, we just throwing in json
-    console.log('--.>', data.components);
     var markup = doSizlate(page, $('html'), data.components)
     $('body').scrollTop($('#container'))
     callback(null, markup)
