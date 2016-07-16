@@ -5,7 +5,6 @@ var sizlate = require('sizlate')
 var getFile = require('./read-file')
 
 var speclate = require('speclate')
-console.log('spec', speclate);
 var doSizlate = speclate.page.doSizlate
 var loadComponents = speclate.components.load
 
