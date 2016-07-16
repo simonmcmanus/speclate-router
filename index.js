@@ -4,11 +4,11 @@ var page = require('page');
 var speclate = require('speclate');
 var pageRender = require('./page-render')
 
-module.exports = function(spec, pageRenderCallback) {
+module.exports = function(spec, options, pageRenderCallback) {
     for(var route in spec) {
       page(route, function(route, context) {
           if(!context.init) {
-            pageRender(spec[route], pageRenderCallback);
+            pageRender(spec[route], options, pageRenderCallback);
           }
       }.bind(null, route));
     }

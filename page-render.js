@@ -5,13 +5,14 @@ var sizlate = require('sizlate')
 var getFile = require('./read-file')
 
 var speclate = require('speclate')
-var doSizlate = speclate.site.doSizlate
+console.log('spec', speclate);
+var doSizlate = speclate.page.doSizlate
 var loadComponents = speclate.components.load
 
 /**
  * used for client side render.
  */
-module.exports = function (page, callback) {
+module.exports = function (page, options, callback) {
   async.parallel({
     pageLayout: function (next) {
       var pageLayoutPath = '/pages/' + page.page + '/' + page.page + '.html'
@@ -29,13 +30,14 @@ module.exports = function (page, callback) {
     if (err) {
       return callback(err)
     }
-    $('nav a.active').removeClass('active')
+    options.before();
 
     sizlate.render($('html'), {
       '#container': data.pageLayout
     })
+
     var markup = doSizlate(page, $('html'), data.components)
-    $('body').scrollTop($('#container'))
+    options.after();
     callback(null, markup)
   })
 }
