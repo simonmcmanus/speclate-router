@@ -6,7 +6,7 @@
   "scripts": {},
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "page": "^1.7.1",
     "speclate": "5.x.x",
     "superagent": "^1.8.3"
