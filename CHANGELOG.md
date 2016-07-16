@@ -1,5 +1,13 @@
 
 
+# 2.1.3
+
+put some markdown back into the changelog (it was lost in last release ) [view commit](http://github.com/$3/$4/commit/c34854b19cbb76bf4c8a9bcca90723e169ea5662) 
+
+minor change to readme (testing release) [view commit](http://github.com/$3/$4/commit/9ba8f7a17dda8fef92ce2ef61ec207b835b66082) 
+
+ 
+
 # 1.0.0
 
 removing test command [view commit](http://github.com/$3/$4/commit/9053eb64b3b40d1bd97cb06f1be220b136d92bfa)
