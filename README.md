@@ -7,4 +7,3 @@ Given a speclate spec (github.com/simonmcmanus/speclate) Generates a page.js rou
 For an example see:
 
 https://github.com/lnug/lnug.github.io
-
