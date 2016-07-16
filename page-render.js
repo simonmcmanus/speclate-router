@@ -36,7 +36,6 @@ module.exports = function (page, options, callback) {
     })
 
     var markup = doSizlate(page, $('html'), data.components)
-    options.after();
-    callback && callback(null, markup)
+    options.after(null, markup);
   })
 }
