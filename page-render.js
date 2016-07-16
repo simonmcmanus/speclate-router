@@ -38,6 +38,6 @@ module.exports = function (page, options, callback) {
 
     var markup = doSizlate(page, $('html'), data.components)
     options.after();
-    callback(null, markup)
+    callback && callback(null, markup)
   })
 }
