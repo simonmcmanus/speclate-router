@@ -1,5 +1,11 @@
 
 
+# 2.3.1
+
+safety checks on each before after and error functions [view commit](http://github.com/$3/$4/commit/5808c53ac01ee23feca6abf7ed757530df1a7985) 
+
+ 
+
 # 2.3.0
 
 removed callback from page render and calling error from options [view commit](http://github.com/$3/$4/commit/38e6dd37298c15225f81006df0c712eef5c3f57c) 
