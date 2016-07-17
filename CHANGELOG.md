@@ -1,5 +1,11 @@
 
 
+# 2.2.0
+
+handle error in superagent readfile [view commit](http://github.com/$3/$4/commit/0cbdcce23dfb9679a6bc1df1c6cbc9e90edf3a36) 
+
+ 
+
 # 2.1.4
 
 test tweak [view commit](http://github.com/$3/$4/commit/351129778c1ef1cbfbaa43f067bbee6c9d231aff) 
