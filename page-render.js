@@ -11,7 +11,7 @@ var loadComponents = speclate.components.load
 /**
  * used for client side render.
  */
-module.exports = function (page, options, callback) {
+module.exports = function (page, options) {
   async.parallel({
     pageLayout: function (next) {
       var pageLayoutPath = '/pages/' + page.page + '/' + page.page + '.html'
@@ -27,7 +27,7 @@ module.exports = function (page, options, callback) {
   }, function (err, data) {
 
     if (err) {
-      return callback(err)
+      return options.error(err)
     }
     options.before();
 
