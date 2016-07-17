@@ -1,5 +1,11 @@
 
 
+# 2.3.0
+
+removed callback from page render and calling error from options [view commit](http://github.com/$3/$4/commit/38e6dd37298c15225f81006df0c712eef5c3f57c) 
+
+ 
+
 # 2.2.0
 
 handle error in superagent readfile [view commit](http://github.com/$3/$4/commit/0cbdcce23dfb9679a6bc1df1c6cbc9e90edf3a36) 
