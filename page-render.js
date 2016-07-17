@@ -27,15 +27,16 @@ module.exports = function (page, options) {
   }, function (err, data) {
 
     if (err) {
-      return options.error(err)
+      options.error && options.error(err);
+      return;
     }
-    options.before();
+    options.before && options.before();
 
     sizlate.render($('html'), {
       '#container': data.pageLayout
     })
 
     var markup = doSizlate(page, $('html'), data.components)
-    options.after(null, markup);
+    options.after && options.after(null, markup);
   })
 }
