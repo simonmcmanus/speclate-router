@@ -1,21 +1,21 @@
 {
-    "name": "speclate-router",
-    "version": "2.2.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {},
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "page": "^1.7.1",
-        "sizlate": "1.2.x",
-        "speclate": "5.x.x",
-        "superagent": "^1.8.3"
-    },
-    "bundledDependencies": [
-        "page",
-        "sizlate",
-        "speclate",
-        "superagent"
-    ]
+  "name": "speclate-router",
+  "version": "2.3.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "page": "^1.7.1",
+    "sizlate": "1.2.x",
+    "speclate": "5.x.x",
+    "superagent": "^1.8.3"
+  },
+  "bundledDependencies": [
+    "page",
+    "sizlate",
+    "speclate",
+    "superagent"
+  ]
 }
