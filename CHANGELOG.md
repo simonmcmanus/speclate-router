@@ -1,5 +1,13 @@
 
 
+# 2.4.0
+
+index.html -> / [view commit](http://github.com/$3/$4/commit/753f188307cf066d88c200eefc6d912f3cfc0411) 
+
+readme updates [view commit](http://github.com/$3/$4/commit/1d3a40d690dc502b2a5053865791bba4b4a0179d) 
+
+ 
+
 # 2.3.1
 
 safety checks on each before after and error functions [view commit](http://github.com/$3/$4/commit/5808c53ac01ee23feca6abf7ed757530df1a7985) 
