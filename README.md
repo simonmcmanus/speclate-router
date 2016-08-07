@@ -7,7 +7,7 @@ Given a speclate spec (github.com/simonmcmanus/speclate) Generates a page.js rou
 #Example
 
 ```js
-var speclate = require('speclate-router');
+var router = require('speclate-router');
 var spec = {
     '/': {
         page: 'home'
@@ -28,6 +28,11 @@ router(spec, {
 });
 
 ```
+
+
+#Notes
+
+* / gets replaces for /index.html
 
 For an example see:
 
