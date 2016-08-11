@@ -9,7 +9,7 @@
     "dependencies": {
         "page": "1.x.x",
         "sizlate": "1.x.x",
-        "speclate": "5.x.x",
+        "speclate": "6.x.x",
         "speclate-fetch": "1.x.x"
     },
     "bundledDependencies": [
