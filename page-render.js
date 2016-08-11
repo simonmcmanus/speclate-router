@@ -2,7 +2,7 @@
 
 var async = require('async')
 var sizlate = require('sizlate')
-var getFile = require('./read-file')
+var getFile = require('speclate-fetch').readFile
 
 var speclate = require('speclate')
 var doSizlate = speclate.page.doSizlate
@@ -15,7 +15,7 @@ module.exports = function (page, options) {
   async.parallel({
     pageLayout: function (next) {
       var pageLayoutPath = '/pages/' + page.page + '/' + page.page + '.html'
-      getFile(pageLayoutPath, next)
+      getFile(pageLayoutPath, {encoding: 'utf-8'}, next)
     },
     components: function (next) {
       if (page.spec) {
@@ -30,7 +30,11 @@ module.exports = function (page, options) {
       options.error && options.error(err);
       return;
     }
-    options.before && options.before();
+
+    if(options.before) {
+        options.before();
+    }
+
 
     sizlate.render($('html'), {
       '#container': data.pageLayout
