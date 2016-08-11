@@ -1,5 +1,11 @@
 
 
+# 3.0.1
+
+use the lateset speclate [view commit](http://github.com/$3/$4/commit/a45f742f590bc357ebb2d4c9fc6aaa54283f45ef) 
+
+ 
+
 # 3.0.0
 
 Merge pull request #2 from simonmcmanus/fetch [view commit](http://github.com/$3/$4/commit/2f50956d628b26ad7a72e1c2eaf28bccaff1263b) 
