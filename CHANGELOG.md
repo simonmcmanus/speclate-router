@@ -1,5 +1,13 @@
 
 
+# 3.0.0
+
+Merge pull request #2 from simonmcmanus/fetch [view commit](http://github.com/$3/$4/commit/2f50956d628b26ad7a72e1c2eaf28bccaff1263b) 
+
+Release: speclate-router v2.4.0: 753f188 - index.html -> / 1d3a40d - readme updates [view commit](http://github.com/$3/$4/commit/fbc57524cee5d9e0a84d6925278004fbc83ce3cf) 
+
+ 
+
 # 2.4.0
 
 index.html -> / [view commit](http://github.com/$3/$4/commit/753f188307cf066d88c200eefc6d912f3cfc0411) 
