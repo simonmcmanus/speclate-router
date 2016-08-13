@@ -1,5 +1,11 @@
 
 
+# 3.1.1
+
+fix speclate version [view commit](http://github.com/$3/$packageName/commit/6f75331e70022672c3bfc17b05a90d9cdeb9ae67) 
+
+ 
+
 # 3.1.0
 
 adding async [view commit](http://github.com/$3/$packageName/commit/0150f8e640eacda88646e00a27eff68c86749808) 
