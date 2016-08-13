@@ -1,5 +1,11 @@
 
 
+# 3.1.0
+
+adding async [view commit](http://github.com/$3/$packageName/commit/0150f8e640eacda88646e00a27eff68c86749808) 
+
+ 
+
 # 3.0.1
 
 use the lateset speclate [view commit](http://github.com/$3/$4/commit/a45f742f590bc357ebb2d4c9fc6aaa54283f45ef) 
