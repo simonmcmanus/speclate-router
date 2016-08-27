@@ -4,23 +4,42 @@ var page = require('page');
 var speclate = require('speclate');
 var pageRender = require('./page-render')
 
-module.exports = function(spec, options, pageRenderCallback) {
+module.exports = function(options, pageRenderCallback) {
 
-    for(var route in spec) {
+        page('*', function(context, next) {
 
-        var originalRoute = route;
-        var listenOn = route;
+            var routeName = context.pathname.slice(0, -5)
 
-        if(route === '/index.html') {
-            listenOn = '/';
-        }
-
-        page(listenOn, function(route, context) {
-
-            if(!context.init) {
-                pageRender(spec[route], options, pageRenderCallback);
+            if (routeName === '') {
+                routeName = '/index';
             }
-        }.bind(null, route));
-    }
-    page();
+            var specPath = '/api/speclate' + routeName + '.json';
+
+            fetchSpec(specPath, function(err, pageSpec) {
+
+                if (!context.init) {
+                     pageRender(pageSpec, options, pageRenderCallback);
+                }
+            });
+        });
+        page();
 };
+
+
+var fetchSpec = function(specUrl, callback) {
+
+    var request = new Request(specUrl, {
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        })
+    })
+
+    fetch(request).then(function (code) {
+        return code.json()
+    }).then(function (spec) {
+        return callback(null, spec);
+    }).catch((e) => {
+        return callback(e)
+    })
+};
+
