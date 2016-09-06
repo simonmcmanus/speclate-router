@@ -10,7 +10,6 @@ module.exports = function(options, pageRenderCallback) {
         page('*', function(context, next) {
 
             var routeName = context.pathname.slice(0, -5)
-console.log('in router')
             if (routeName === '') {
                 routeName = '/index';
             }
