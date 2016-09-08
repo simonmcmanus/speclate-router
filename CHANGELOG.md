@@ -1,5 +1,15 @@
 
 
+# 4.0.0
+
+removing console [view commit](http://github.com/$3/$packageName/commit/e0d6fd193aca7f3c792ee95357eafa7bfc953821) 
+
+handling page render differently [view commit](http://github.com/$3/$packageName/commit/897f7b3ca57ed0ed649b585b9e411f0f3d180255) 
+
+fetch the spec on each page load, allows for content updating [view commit](http://github.com/$3/$packageName/commit/524d3e34f677abdaafe71d69a20dd93bf973b2fe) 
+
+ 
+
 # 3.1.1
 
 fix speclate version [view commit](http://github.com/$3/$packageName/commit/6f75331e70022672c3bfc17b05a90d9cdeb9ae67) 
