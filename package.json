@@ -1,23 +1,35 @@
 {
-    "name": "speclate-router",
-    "version": "4.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {},
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "async": "2.x.x",
-        "page": "1.x.x",
-        "sizlate": "1.x.x",
-        "speclate": "^6.2.4",
-        "speclate-fetch": "1.x.x"
-    },
-    "bundledDependencies": [
-        "async",
-        "page",
-        "sizlate",
-        "speclate",
-        "speclate-fetch"
+  "name": "speclate-router",
+  "version": "4.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "2.x.x",
+    "page": "1.x.x",
+    "sizlate": "1.x.x",
+    "speclate": "^6.2.4",
+    "speclate-fetch": "1.x.x"
+  },
+  "bundledDependencies": [
+    "async",
+    "page",
+    "sizlate",
+    "speclate",
+    "speclate-fetch"
+  ],
+  "devDependencies": {
+    "standard": "^8.0.0"
+  },
+
+  "standard": {
+    "globals": [
+      "$",
+      "fetch"
     ]
+  }
 }
