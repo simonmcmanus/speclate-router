@@ -37,7 +37,7 @@ var fetchSpec = function (specUrl, callback) {
     return code.json()
   }).then(function (spec) {
     return callback(null, spec)
-  }).catch((e) => {
+  }).catch(function (e) {
     return callback(e)
   })
 }
