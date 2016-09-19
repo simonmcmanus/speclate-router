@@ -12,7 +12,7 @@
         "async": "2.x.x",
         "page": "1.x.x",
         "sizlate": "1.x.x",
-        "speclate": "^6.2.4",
+        "speclate": "^7.1.0",
         "speclate-fetch": "1.x.x"
     },
     "bundledDependencies": [
