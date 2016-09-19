@@ -1,6 +1,6 @@
 {
   "name": "speclate-router",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,6 @@
   "devDependencies": {
     "standard": "^8.0.0"
   },
-
   "standard": {
     "globals": [
       "$",
