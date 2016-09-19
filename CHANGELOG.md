@@ -1,5 +1,11 @@
 
 
+# 4.0.1
+
+linting and CI [view commit](http://github.com/$3/$packageName/commit/4010359a7ab5640e2eb5b1373039665f7153d694) 
+
+ 
+
 # 4.0.0
 
 removing console [view commit](http://github.com/$3/$packageName/commit/e0d6fd193aca7f3c792ee95357eafa7bfc953821) 
