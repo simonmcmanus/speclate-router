@@ -1,5 +1,11 @@
 
 
+# 4.0.2
+
+use function callback for older browsers [view commit](http://github.com/$3/$packageName/commit/db5c731e5651374737fdb7f6cee0dea82e646fe5) 
+
+ 
+
 # 4.0.1
 
 linting and CI [view commit](http://github.com/$3/$packageName/commit/4010359a7ab5640e2eb5b1373039665f7153d694) 
