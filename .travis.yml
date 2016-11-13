@@ -2,5 +2,8 @@ language: node_js
 node_js:
   - "node"
 
+install:
+  - npm install -g nightwatch
+
 before_script:
-    - npm run test-setup
+    - npm run test-setup &
