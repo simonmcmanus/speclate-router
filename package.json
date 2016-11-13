@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test-server && npm run nightwatch && npm run lint",
+    "test-setup": "npm run test-server",
+    "test": " npm run nightwatch && npm run lint",
     "lint": "standard",
     "test-build-client-side": "browserify test/sample/client/router.js > test/sample/client/router-compiled.js",
     "test-server": "npm run test-build-client-side && cd test/sample/ && speclate --all && speclate --debug 5004",
