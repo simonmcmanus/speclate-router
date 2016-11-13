@@ -3,6 +3,7 @@ node_js:
   - "node"
 
 install:
+  - node nightwatch.conf.js
   - npm install -g nightwatch
 
 before_script:
