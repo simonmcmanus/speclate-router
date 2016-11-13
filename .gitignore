@@ -1,3 +1,6 @@
 node_modules
 npm-debug.log
 dist
+selenium-debug.log
+tests/sample/client/router-compiled.js
+tests/sample/docs
