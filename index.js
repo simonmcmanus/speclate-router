@@ -3,8 +3,11 @@
 var page = require('page')
 var pageRender = require('./page-render')
 
-module.exports = function (options, pageRenderCallback) {
-  var $container = $('#container')
+module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
+  speclateOptions = speclateOptions || {}
+  routerOptions = routerOptions || {}
+  var $container = $(speclateOptions.container || '#container')
+  var loadingClass = routerOptions.loadingClass || 'loading'
 
   page('*', function (context, next) {
     var routeName = context.pathname.slice(0, -5)
@@ -12,11 +15,11 @@ module.exports = function (options, pageRenderCallback) {
       routeName = '/index'
     }
     var specPath = '/api/speclate' + routeName + '.json'
-    $container.addClass('loading')
+    $container.addClass(loadingClass)
     fetchSpec(specPath, function (err, pageSpec) {
       if (err) {
-        $container.removeClass('loading')
-        return options.error(err, $container)
+        $container.removeClass(loadingClass)
+        return routerOptions.error(err, $container)
       }
 
       if (context.init) {
@@ -24,9 +27,9 @@ module.exports = function (options, pageRenderCallback) {
                     // reset options to before /after functions are not passed in.
         pageRender(pageSpec, {}, pageRenderCallback)
       } else {
-        pageRender(pageSpec, options, pageRenderCallback)
+        pageRender(pageSpec, routerOptions, pageRenderCallback)
       }
-      $container.removeClass('loading')
+      $container.removeClass(loadingClass)
     })
   })
   page()
