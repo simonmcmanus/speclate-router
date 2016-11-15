@@ -9,10 +9,10 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
   # set the xvfb screen size to 1280x1024x16
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+  - npm run test-server &
 
 
 before_script:
   - chmod 0777 ./nightwatch.js
-  - npm run test-server
 script: ./run_tests
 
