@@ -3,7 +3,7 @@ module.exports = {
     browser
       .url('http://localhost:5004/')
       .waitForElementVisible('body', 1000)
-      // .assert.containsText('#container', 'home')
+      .assert.containsText('#container', 'home')
       // .click('nav a[href="contact.html"]')
       // .assert.containsText('#container', 'contact')
       .end();
