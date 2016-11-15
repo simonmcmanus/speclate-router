@@ -6,10 +6,7 @@
 # exit with an error, if any internal script errors
 set -e
 
-# setup Meteor (should already be done)
-#    curl https://install.meteor.com | /bin/sh
-#    meteor reset
-#    meteor
+
 
 # run Nightwatch test scripts against local Meteor
 ./nightwatch.js --config nightwatch.json --test test/e2e/spec.js
