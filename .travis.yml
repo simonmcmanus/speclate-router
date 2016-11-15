@@ -12,5 +12,6 @@ before_install:
 
 
 before_script: chmod 0777 ./nightwatch.js
+before_script: chmod 0777 ./nightwatch.js
 script: ./run_tests
 
