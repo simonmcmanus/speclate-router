@@ -9,7 +9,7 @@
     "lint": "standard",
     "test-build-client-side": "browserify test/sample/client/router.js > test/sample/client/router-compiled.js",
     "test-server": "npm run test-build-client-side && cd test/sample/ && speclate --all && speclate --debug 5004",
-    "nightwatch": "nightwatch --config nightwatch.conf.js"
+    "nightwatch": "node ./nightwatch.js"
   },
   "author": "",
   "license": "ISC",
@@ -30,9 +30,7 @@
   "devDependencies": {
     "browserify": "^13.1.1",
     "jquery": "^3.1.1",
-    "nightwatch": "^0.9.8",
-    "selenium-download": "^2.0.7",
-    "standard": "^8.0.0"
+    "nightwatch": "^0.9.8"
   },
   "standard": {
     "globals": [
