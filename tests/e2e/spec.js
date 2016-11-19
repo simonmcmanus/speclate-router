@@ -1,7 +1,7 @@
 module.exports = {
   'Page should be added to the container' : function (browser) {
     browser
-      .url('http://localhost:5004/')
+      .url('http://localhost:5004/contact')
       .waitForElementVisible('body', 1000)
       .pause(2000)
       .assert.containsText('#container', 'home')
