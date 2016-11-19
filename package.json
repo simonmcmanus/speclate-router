@@ -9,7 +9,7 @@
     "lint": "standard",
     "test-build-client-side": "browserify tests/sample/client/router.js > tests/sample/client/router-compiled.js",
     "test-server": "npm run test-build-client-side && cd tests/sample/ && speclate --all && speclate --debug 5004",
-    "nightwatch": "node ./nightwatch.js"
+    "nightwatch": "./run_tests"
   },
   "author": "",
   "license": "ISC",

@@ -8,7 +8,7 @@ set -e
 
 
 
-# run Nightwatch test scripts against local Meteor
+# run Nightwatch test scripts against
 ./nightwatch.js --config nightwatch.json --test tests/e2e/spec.js
 
 
