@@ -8,10 +8,11 @@
   "selenium" : {
     "start_process" : true,
     "server_path" : "selenium-server-standalone-2.44.0.jar",
-    "log_path" : "test-logs",
+    "log_path" : "tests/e2e/logs",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "selenium/chromedriver",
+
+      "webdriver.chrome.driver" : "tests/selenium/chromedriver",
       "webdriver.ie.driver" : ""
     }
   },
@@ -30,7 +31,7 @@
         "path" : ""
       },
       "desiredCapabilities": {
-        "browserName": "firefox",
+        "browserName": "chrome",
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }

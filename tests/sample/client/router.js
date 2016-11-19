@@ -1,5 +1,8 @@
-'use strict';
+// // 'use strict';
 
-window.$ = require('jquery');
-var router = require('../../../');
-router();
+
+var router = require('../../../')
+var routerOptions = {
+  $: require('jquery')
+}
+router(routerOptions);

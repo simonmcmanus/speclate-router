@@ -1,12 +1,12 @@
 module.exports = {
-  "/index.html": {
+  '/index.html': {
     page: 'home'
   },
-  "/contact.html": {
+  '/contact.html': {
     page: 'contact'
   },
   options: {
     outputDir: '/docs',
     files: ['./client/router-compiled.js']
   }
-};
+}

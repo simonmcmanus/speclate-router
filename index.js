@@ -4,9 +4,14 @@ var page = require('page')
 var pageRender = require('./page-render')
 
 module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
-
   speclateOptions = speclateOptions || {}
   routerOptions = routerOptions || {}
+  var $ = routerOptions.$ || $;
+
+  if (!$) {
+    throw new Error('JQuery not found.')
+  }
+
   var $container = $(speclateOptions.container || '#container')
   var loadingClass = routerOptions.loadingClass || 'loading'
 
