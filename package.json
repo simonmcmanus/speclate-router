@@ -7,7 +7,7 @@
     "test-setup": "npm run test-server",
     "test": " npm run nightwatch && npm run lint",
     "lint": "standard",
-    "test-build-client-side": "browserify tests/sample/client/router.js > tests/sample/client/router-compiled.js",
+    "test-build-client-side": "./node_modules/browserify/bin/cmd.js tests/sample/client/router.js > tests/sample/client/router-compiled.js",
     "test-server": "npm run test-build-client-side && cd tests/sample/ && speclate --all && speclate --debug 5004",
     "nightwatch": "./run_tests"
   },
