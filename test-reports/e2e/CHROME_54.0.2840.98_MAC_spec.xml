@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="spec"
+    errors="0" failures="0" hostname="" id="" package="e2e" skipped="0"
+    tests="1" time="5.316" timestamp="Sat, 19 Nov 2016 09:32:31 GMT">
+  
+    <testcase name="Page should be added to the container" time="5.316" assertions="1">
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>
