@@ -7,6 +7,7 @@
 set -e
 
 
+kill `lsof -t -i:4444`
 selenium &
 # run Nightwatch test scripts against
 ./nightwatch.js --config nightwatch.json --test tests/e2e/spec.js
