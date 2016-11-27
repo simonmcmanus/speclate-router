@@ -36,8 +36,7 @@ module.exports = function (page, options) {
 
     sizlate.render($('html'), {
       '#container': {
-        innerHTML: data.pageLayout,
-        className: 'fadeIn'
+        innerHTML: data.pageLayout
       }
     })
 
