@@ -6,7 +6,7 @@ module.exports = {
     page: 'contact'
   },
   options: {
-    outputDir: 'docs',
+    outputDir: './docs',
     files: ['./client/router-compiled.js']
   }
 }
