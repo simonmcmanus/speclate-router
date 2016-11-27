@@ -13,6 +13,7 @@ before_install:
 before_script:
   - chmod 0777 ./tests/e2e/nightwatch.js
   - npm run test-server &
+  - "sleep 5"
 
 script: npm run test
 
