@@ -13,6 +13,7 @@ before_install:
 before_script:
   - chmod 0777 ./tests/e2e/nightwatch.js
   - mkdir ./tests/sample/docs
+  - cd node_modules/speclate && npm i speclate-cli@1.4.3 && cd ../../
   - npm run test-server &
   - "sleep 10"
 
