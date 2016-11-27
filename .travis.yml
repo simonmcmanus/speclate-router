@@ -15,5 +15,7 @@ before_script:
   - npm run test-server &
   - "sleep 5"
 
-script: npm run test
+script:
+  - npm i speclate-cli@1.4.2
+  - npm run test
 
