@@ -8,7 +8,7 @@
     "test": " npm run nightwatch && npm run lint",
     "lint": "standard",
     "test-build-client-side": "./node_modules/browserify/bin/cmd.js tests/sample/client/router.js > tests/sample/client/router-compiled.js",
-    "test-server": "npm run test-build-client-side && cd tests/sample/ && pwd && ls ./docs && speclate --all && speclate --debug 5004",
+    "test-server": "npm run test-build-client-side && cd tests/sample/ && speclate --all && speclate --debug 5004",
     "nightwatch": "tests/e2e/nightwatch.js --config tests/e2e/nightwatch.json --test tests/e2e/spec.js"
   },
   "author": "",
