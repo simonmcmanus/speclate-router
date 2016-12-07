@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "2.x.x",
+    "async.parallel": "0.5.2",
     "page": "1.x.x",
     "sizlate": "1.x.x",
     "speclate": "^7.1.0",

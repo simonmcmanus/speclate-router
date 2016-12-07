@@ -1,6 +1,6 @@
 'use strict'
 
-var async = require('async')
+var asyncParallel = require('async.parallel')
 var sizlate = require('sizlate')
 var getFile = require('speclate-fetch').readFile
 
@@ -11,7 +11,7 @@ var loadComponents = require('speclate/lib/page/load-components')
  * used for client side render.
  */
 module.exports = function (page, options) {
-  async.parallel({
+  asyncParallel({
     pageLayout: function (next) {
       var pageLayoutPath = '/pages/' + page.page + '/' + page.page + '.html'
       getFile(pageLayoutPath, {encoding: 'utf-8'}, next)
