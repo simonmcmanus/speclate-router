@@ -4,9 +4,8 @@ var async = require('async')
 var sizlate = require('sizlate')
 var getFile = require('speclate-fetch').readFile
 
-var speclate = require('speclate')
-var doSizlate = speclate.page.doSizlate
-var loadComponents = speclate.components.load
+var doSizlate = require('speclate/lib/page/do-sizlate')
+var loadComponents = require('speclate/lib/page/load-components')
 
 /**
  * used for client side render.
