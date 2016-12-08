@@ -1,5 +1,43 @@
 
 
+# 4.1.0
+
+just using async parallel [view commit](http://github.com/$3/$packageName/commit/962661a8cf68812540170bbc9f79251c2982bf84) 
+
+only pull in the required speclate file [view commit](http://github.com/$3/$packageName/commit/7f7ff92acc14ec3f80d77d019fd114f262052cdb) 
+
+adding standard to dev deps [view commit](http://github.com/$3/$packageName/commit/90809841566f034c8e04879c00333b893683147f) 
+
+speclate-cli@1.4.3 [view commit](http://github.com/$3/$packageName/commit/3bafa7c28a956aa83d864dc2cd779cd055b49146) 
+
+output dir as relative path [view commit](http://github.com/$3/$packageName/commit/87c28d243af8d1d4425b06a7b57db1b1a9f44059) 
+
+make the docs dir [view commit](http://github.com/$3/$packageName/commit/0c22a138ccc8ab1ea63b1c4dae78dd8308915fa8) 
+
+output to docs [view commit](http://github.com/$3/$packageName/commit/e8f285d7cf7fec82b4291036010af97a7fb894cf) 
+
+install as a dep of speclate [view commit](http://github.com/$3/$packageName/commit/5a8b437a92cf6a70c867222789abd26601e8bc84) 
+
+before test-server [view commit](http://github.com/$3/$packageName/commit/2c61840d9252f3be9b483e88bdf81fcb3d1e1228) 
+
+install latest cli [view commit](http://github.com/$3/$packageName/commit/63c8f6379e459dce1ad211c35c074b374a7810b3) 
+
+relative docs [view commit](http://github.com/$3/$packageName/commit/2212416995bd55166addec222d75097a1bc7a928) 
+
+tidy up [view commit](http://github.com/$3/$packageName/commit/c38dcac3b26e767fa12a77e1f2eba01da9615c5b) 
+
+give 5 secs for server to start [view commit](http://github.com/$3/$packageName/commit/66ff4b6db7f7729cc82659394c6e42af7c848416) 
+
+point to browserify cmd.js [view commit](http://github.com/$3/$packageName/commit/d025367724e8f8e90353bd74bf9a077f57aa6c6f) 
+
+adding nightwatch tests [view commit](http://github.com/$3/$packageName/commit/73627ac91d291619f0efbcaff8b863782bb2de1f) 
+
+adding MIT licence [view commit](http://github.com/$3/$packageName/commit/991f3be45019b54c5f24a96b5edd689a66238025) 
+
+chore(package): update speclate to version 7.1.0 [view commit](http://github.com/$3/$packageName/commit/b83975ffc57854fb51ff123b44ee0e01a4a96ea1) 
+
+ 
+
 # 4.0.2
 
 use function callback for older browsers [view commit](http://github.com/$3/$packageName/commit/db5c731e5651374737fdb7f6cee0dea82e646fe5) 
