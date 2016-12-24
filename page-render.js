@@ -30,7 +30,7 @@ module.exports = function (page, options) {
     }
 
     if (options.before) {
-      options.before()
+      options.before(null, markup, page)
     }
 
     sizlate.render($('html'), {
@@ -40,6 +40,9 @@ module.exports = function (page, options) {
     })
 
     var markup = doSizlate(page, $('html'), data.components)
-    options.after && options.after(null, markup)
+
+    if (options.after) {
+      options.after(null, markup, page)
+    }
   })
 }
