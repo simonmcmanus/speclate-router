@@ -2,6 +2,36 @@
 
 # 4.2.0
 
+ignore tests reports [view commit](http://github.com/$3/$packageName/commit/a8b2c7c206e96d6a8450adc30bbd9227a72be6e6) 
+
+run server and tests at the same time [view commit](http://github.com/$3/$packageName/commit/3b30b57211c5308cc6cc32c461c5cbed218ee812) 
+
+start server as part of test command [view commit](http://github.com/$3/$packageName/commit/341f5c043ba8d51ee54ec52a0d3698c21bef0407) 
+
+ignore test reports folder [view commit](http://github.com/$3/$packageName/commit/0cf5f4e6ac210a44aedec109e85e8bf8deac144a) 
+
+$newVersion - adding CHANGELOG.md file - (this commit message should get squashed) [skip ci] [view commit](http://github.com/$3/$packageName/commit/5c19ff03aba3a90aa4abdf00fef14a90bb61873f) 
+
+$newVersion - adding CHANGELOG.md file - (this commit message should get squashed) [skip ci] [view commit](http://github.com/$3/$packageName/commit/05099c61319a543a3f8c296da28376f8aa5f4920) 
+
+Merge branch 'master' of github.com:simonmcmanus/speclate-router [view commit](http://github.com/$3/$packageName/commit/b34089a2cb296f5e6b79f6780fb493bc25a901c5) 
+
+passing page  details and markup to before and after [view commit](http://github.com/$3/$packageName/commit/2e3945c0e8dd3ab4c3332b9ce9205652e81b37dc) 
+
+Merge pull request #9 from simonmcmanus/greenkeeper-speclate-8.0.0 [view commit](http://github.com/$3/$packageName/commit/8538f3fce205efe18843196999852e0d361536a6) 
+
+remove npm i speclate-cli from travis script [view commit](http://github.com/$3/$packageName/commit/bed8b1fda90286e6b25df8c3e5babb878f1cdc65) 
+
+dont do weird install [view commit](http://github.com/$3/$packageName/commit/85b72bbb1cbd0ba62e4906028558a86da45244a7) 
+
+adding npm ls speclate-cli for debugging [view commit](http://github.com/$3/$packageName/commit/4e7f4817e0769132e30ccd33cbf51ba2effe66b2) 
+
+chore(package): update speclate to version 8.0.0 [view commit](http://github.com/$3/$packageName/commit/651b3cae6ee7e5669ecbe888b095b8a06d938af2) 
+
+ 
+
+# 4.2.0
+
 $newVersion - adding CHANGELOG.md file - (this commit message should get squashed) [skip ci] [view commit](http://github.com/$3/$packageName/commit/05099c61319a543a3f8c296da28376f8aa5f4920) 
 
 Merge branch 'master' of github.com:simonmcmanus/speclate-router [view commit](http://github.com/$3/$packageName/commit/b34089a2cb296f5e6b79f6780fb493bc25a901c5) 
