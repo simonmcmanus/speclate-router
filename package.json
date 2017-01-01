@@ -1,42 +1,42 @@
 {
-    "name": "speclate-router",
-    "version": "4.1.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test-setup": "npm run test-server",
-        "test": "npm run nightwatch && npm run lint",
-        "lint": "standard",
-        "test-build-client-side": "./node_modules/browserify/bin/cmd.js tests/sample/client/router.js > tests/sample/client/router-compiled.js",
-        "test-server": "npm run test-build-client-side && cd tests/sample/ && speclate --all && speclate --debug 5004",
-        "nightwatch": "tests/e2e/nightwatch.js --config tests/e2e/nightwatch.json --test tests/e2e/spec.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "async.parallel": "0.5.2",
-        "page": "1.x.x",
-        "sizlate": "1.x.x",
-        "speclate": "8.0.0",
-        "speclate-fetch": "1.x.x"
-    },
-    "bundledDependencies": [
-        "async.parallel",
-        "page",
-        "sizlate",
-        "speclate",
-        "speclate-fetch"
-    ],
-    "devDependencies": {
-        "browserify": "^13.1.1",
-        "jquery": "^3.1.1",
-        "nightwatch": "^0.9.8",
-        "standard": "^8.6.0"
-    },
-    "standard": {
-        "globals": [
-            "$",
-            "fetch"
-        ]
-    }
+  "name": "speclate-router",
+  "version": "4.2.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-setup": "npm run test-server",
+    "test": "npm run nightwatch && npm run lint",
+    "lint": "standard",
+    "test-build-client-side": "./node_modules/browserify/bin/cmd.js tests/sample/client/router.js > tests/sample/client/router-compiled.js",
+    "test-server": "npm run test-build-client-side && cd tests/sample/ && speclate --all && speclate --debug 5004",
+    "nightwatch": "tests/e2e/nightwatch.js --config tests/e2e/nightwatch.json --test tests/e2e/spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async.parallel": "0.5.2",
+    "page": "1.x.x",
+    "sizlate": "1.x.x",
+    "speclate": "8.0.0",
+    "speclate-fetch": "1.x.x"
+  },
+  "bundledDependencies": [
+    "async.parallel",
+    "page",
+    "sizlate",
+    "speclate",
+    "speclate-fetch"
+  ],
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "jquery": "^3.1.1",
+    "nightwatch": "^0.9.8",
+    "standard": "^8.6.0"
+  },
+  "standard": {
+    "globals": [
+      "$",
+      "fetch"
+    ]
+  }
 }
