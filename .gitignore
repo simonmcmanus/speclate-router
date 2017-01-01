@@ -4,3 +4,4 @@ dist
 selenium-debug.log
 tests/sample/client/router-compiled.js
 tests/sample/docs
+test-reports/
