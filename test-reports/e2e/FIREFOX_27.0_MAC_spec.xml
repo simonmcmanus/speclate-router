@@ -5,9 +5,9 @@
 
   <testsuite name="spec"
     errors="0" failures="0" hostname="" id="" package="e2e" skipped="0"
-    tests="1" time="2.471" timestamp="Sun, 18 Dec 2016 13:27:01 GMT">
+    tests="1" time="8.434" timestamp="Sun, 01 Jan 2017 09:51:45 GMT">
   
-    <testcase name="Page should be added to the container" time="2.471" assertions="3">
+    <testcase name="Page should be added to the container" time="8.434" assertions="3">
 
     
 
