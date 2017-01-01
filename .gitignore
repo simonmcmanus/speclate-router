@@ -1,4 +1,5 @@
 test-reports
+test-reports/*
 node_modules
 npm-debug.log
 dist
