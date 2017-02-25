@@ -1,5 +1,7 @@
 #speclate-router
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/simonmcmanus/speclate-router.svg)](https://greenkeeper.io/)
+
 Client side router for speclate.
 
 Given a speclate spec (github.com/simonmcmanus/speclate) Generates a page.js router:
