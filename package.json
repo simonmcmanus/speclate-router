@@ -17,7 +17,7 @@
     "async.parallel": "0.5.2",
     "page": "1.x.x",
     "sizlate": "1.x.x",
-    "speclate": "11.x.x",
+    "speclate": "^12.0.0",
     "speclate-fetch": "2.x.x"
   },
   "devDependencies": {
