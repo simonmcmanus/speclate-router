@@ -10,7 +10,7 @@ var loadComponents = require('speclate/lib/page/load-components')
 /**
  * used for client side render.
  */
-module.exports = function (page, options) {
+module.exports = function ($container, page, options) {
   asyncParallel({
     pageLayout: function (next) {
       var pageLayoutPath = '/pages/' + page.page + '/' + page.page + '.html'
@@ -25,7 +25,7 @@ module.exports = function (page, options) {
     }
   }, function (err, data) {
     if (err) {
-      options.error && options.error(err)
+      options.error && options.error(err, $container)
       return
     }
 
