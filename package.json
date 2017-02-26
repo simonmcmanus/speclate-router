@@ -18,7 +18,7 @@
     "page": "1.x.x",
     "sizlate": "1.x.x",
     "speclate": "11.x.x",
-    "speclate-fetch": "2.x.x"
+    "speclate-fetch": "^2.0.2"
   },
   "devDependencies": {
     "browserify": "^14.1.0",
