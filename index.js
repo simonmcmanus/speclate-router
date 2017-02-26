@@ -34,6 +34,7 @@ module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
   })
   page()
 }
+alert('hi');
 
 var fetchSpec = function (specUrl, callback) {
   fetch(specUrl).then(function (code) {

@@ -17,16 +17,9 @@
     "async.parallel": "0.5.2",
     "page": "1.x.x",
     "sizlate": "1.x.x",
-    "speclate": "11.0.0",
-    "speclate-fetch": "2.0.1"
+    "speclate": "11.x.x",
+    "speclate-fetch": "2.x.x"
   },
-  "bundledDependencies": [
-    "async.parallel",
-    "page",
-    "sizlate",
-    "speclate",
-    "speclate-fetch"
-  ],
   "devDependencies": {
     "browserify": "^14.1.0",
     "jquery": "^3.1.1",
