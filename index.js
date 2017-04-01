@@ -18,10 +18,10 @@ module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
     $container.addClass(loadingClass)
 
     var el = document.querySelector('html')
-    el.setAttribute('speclate-url', context.pathname)
+    el.setAttribute('data-speclate-url', context.pathname)
 
     fetchJson(specPath, function (err, pageSpec) {
-      el.setAttribute('speclate-page', pageSpec.page)
+      el.setAttribute('data-speclate-page', pageSpec.page)
       if (err) {
         $container.removeClass(loadingClass)
         return routerOptions.error(err, $container)
