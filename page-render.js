@@ -30,7 +30,7 @@ module.exports = function ($container, page, options) {
     }
 
     if (options.before) {
-      options.before(null, markup, page)
+      options.before(null, null, page)
     }
 
     sizlate.render($('html'), {
