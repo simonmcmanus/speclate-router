@@ -9,6 +9,7 @@ module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
   routerOptions = routerOptions || {}
   var $container = $(speclateOptions.container || '#container')
   var loadingClass = routerOptions.loadingClass || 'loading'
+
   page('*', function (context, next) {
     var routeName = context.pathname.slice(0, -5)
     if (routeName === '') {
