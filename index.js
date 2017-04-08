@@ -16,17 +16,19 @@ module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
       routeName = '/index'
     }
     var specPath = '/api/speclate' + routeName + '.json'
-    $container.addClass(loadingClass)
+    $container.empty()
 
     var el = document.querySelector('html')
+    el.classList.add(loadingClass)
     el.setAttribute('data-speclate-url', context.pathname)
 
     fetchJson(specPath, function (err, pageSpec) {
-      el.setAttribute('data-speclate-page', pageSpec.page)
       if (err) {
         $container.removeClass(loadingClass)
+        el.classList.remove(loadingClass)
         return routerOptions.error(err, $container)
       }
+      el.setAttribute('data-speclate-page', pageSpec.page)
 
       if (context.init) {
                     // we should check the spec version here
@@ -35,7 +37,8 @@ module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
       } else {
         pageRender($container, pageSpec, routerOptions, pageRenderCallback)
       }
-      $container.removeClass(loadingClass)
+
+      el.classList.remove(loadingClass)
     })
   })
   page()
