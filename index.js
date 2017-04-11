@@ -2,8 +2,7 @@
 
 var page = require('page')
 var pageRender = require('./page-render')
-var fetchJson = require('speclate-fetch').json
-var latestRequestUrl;
+var requests;
 
 module.exports = function (routerOptions, speclateOptions) {
   speclateOptions = speclateOptions || {}
@@ -24,34 +23,17 @@ module.exports = function (routerOptions, speclateOptions) {
     el.classList.add(loadingClass)
     el.setAttribute('data-speclate-url', context.pathname)
 
+console.log(requests)
 
-    fetchJson(specPath, function (err, pageSpec, url) {
-
-      var lastLoadedUrl = el.getAttribute('data-speclate-url')
-      if (lastLoadedUrl !== url ) {
-        return //  not the latest request so cancel it.
-      }
-
-
-      if (err) {
-        $container.removeClass(loadingClass)
-        el.classList.remove(loadingClass)
-        return routerOptions.error(err, $container)
-      }
-      el.setAttribute('data-speclate-page', pageSpec.page)
-
-      var loaded = function () {
-        el.classList.remove(loadingClass)
-      }
-
-      if (context.init) {
-        // we should check the spec version here
-        // reset options to before /after functions are not passed in.
-        pageRender($container, pageSpec, {}, loaded)
-      } else {
-        pageRender($container, pageSpec, routerOptions, loaded)
-      }
+    requests.forEach(function(req) {
+      console.log('cancel')
+      req.cancel()
     })
+
+    requests.push(new fetchPage())
+
+
+
   })
   page()
 }
