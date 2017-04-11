@@ -1,8 +1,8 @@
 'use strict'
 
 var page = require('page')
-var pageRender = require('./page-render')
-var fetchPage = require('./fetch-page')
+
+var FetchPage = require('./fetch-page')
 var requests = [];
 
 module.exports = function (routerOptions, speclateOptions) {
@@ -18,7 +18,9 @@ module.exports = function (routerOptions, speclateOptions) {
       routeName = '/index'
     }
     var specPath = '/api/speclate' + routeName + '.json'
-    $container.empty()
+    if (!context.init) {
+      $container.empty()
+    }
 
     var el = document.querySelector('html')
     el.classList.add(loadingClass)
@@ -30,7 +32,7 @@ module.exports = function (routerOptions, speclateOptions) {
     })
   }
 
-    requests.push(new fetchPage(context.pathname))
+    requests.push(new FetchPage(specPath, el, loadingClass, $container, routerOptions, context))
   })
   page()
 }
