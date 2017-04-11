@@ -2,7 +2,8 @@
 
 var page = require('page')
 var pageRender = require('./page-render')
-var requests;
+var fetchPage = require('./fetch-page')
+var requests = [];
 
 module.exports = function (routerOptions, speclateOptions) {
   speclateOptions = speclateOptions || {}
@@ -23,17 +24,13 @@ module.exports = function (routerOptions, speclateOptions) {
     el.classList.add(loadingClass)
     el.setAttribute('data-speclate-url', context.pathname)
 
-console.log(requests)
-
-    requests.forEach(function(req) {
-      console.log('cancel')
+  if (requests) {
+    requests.forEach(function (req) {
       req.cancel()
     })
+  }
 
-    requests.push(new fetchPage())
-
-
-
+    requests.push(new fetchPage(context.pathname))
   })
   page()
 }

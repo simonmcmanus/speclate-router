@@ -3,13 +3,16 @@ var fetchJson = require('speclate-fetch').json
 
 
 //module.exports = function (specPath, htmlEl, loadingClass, $container, routerOptions) {
-module.exports = function () {
+module.exports = function (name) {
 
   var active = true
-console.log('active ');
+
+  var timeout = (name === '/links.html') ? 5000 : 2000
+
+//console.log('active ', active, name);
   setTimeout(function() {
-    console.log('active ', active);
-  }, 400)
+    console.log('active ', active, name);
+  }, timeout)
 
   return {
     cancel: function (isActive) {
