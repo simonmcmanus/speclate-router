@@ -3,12 +3,14 @@
 var page = require('page')
 var pageRender = require('./page-render')
 var fetchJson = require('speclate-fetch').json
+var latestRequestUrl;
 
-module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
+module.exports = function (routerOptions, speclateOptions) {
   speclateOptions = speclateOptions || {}
   routerOptions = routerOptions || {}
   var $container = $(speclateOptions.container || '#container')
   var loadingClass = routerOptions.loadingClass || 'loading'
+
 
   page('*', function (context, next) {
     var routeName = context.pathname.slice(0, -5)
@@ -22,7 +24,15 @@ module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
     el.classList.add(loadingClass)
     el.setAttribute('data-speclate-url', context.pathname)
 
-    fetchJson(specPath, function (err, pageSpec) {
+
+    fetchJson(specPath, function (err, pageSpec, url) {
+
+      var lastLoadedUrl = el.getAttribute('data-speclate-url')
+      if (lastLoadedUrl !== url ) {
+        return //  not the latest request so cancel it.
+      }
+
+
       if (err) {
         $container.removeClass(loadingClass)
         el.classList.remove(loadingClass)
@@ -30,15 +40,17 @@ module.exports = function (routerOptions, speclateOptions, pageRenderCallback) {
       }
       el.setAttribute('data-speclate-page', pageSpec.page)
 
-      if (context.init) {
-                    // we should check the spec version here
-                    // reset options to before /after functions are not passed in.
-        pageRender($container, pageSpec, {}, pageRenderCallback)
-      } else {
-        pageRender($container, pageSpec, routerOptions, pageRenderCallback)
+      var loaded = function () {
+        el.classList.remove(loadingClass)
       }
 
-      el.classList.remove(loadingClass)
+      if (context.init) {
+        // we should check the spec version here
+        // reset options to before /after functions are not passed in.
+        pageRender($container, pageSpec, {}, loaded)
+      } else {
+        pageRender($container, pageSpec, routerOptions, loaded)
+      }
     })
   })
   page()
