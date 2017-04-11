@@ -2,13 +2,10 @@
 var fetchJson = require('speclate-fetch').json
 var pageRender = require('./page-render')
 
-
 module.exports = function (specPath, htmlEl, loadingClass, $container, routerOptions, context) {
-
   var active = true
 
   fetchJson(specPath, function (err, pageSpec, url) {
-
     if (!active) {
       return
     }
