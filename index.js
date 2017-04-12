@@ -29,6 +29,8 @@ module.exports = function (routerOptions, speclateOptions) {
       requests.forEach(function (req) {
         req.cancel()
       })
+      requests = []
+
     }
 
     requests.push(new FetchPage(specPath, el, loadingClass, $container, routerOptions, context))
