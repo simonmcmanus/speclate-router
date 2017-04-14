@@ -24,7 +24,7 @@
     "browserify": "14.x.x",
     "jquery": "3.x.x",
     "nightwatch": "0.x.x",
-    "standard": "10.x.x"
+    "standard": "10.0.1"
   },
   "standard": {
     "globals": [
