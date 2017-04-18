@@ -31,7 +31,6 @@ module.exports = function (routerOptions, speclateOptions) {
         req.cancel()
       })
       requests = []
-
     }
 
     requests.push(new FetchPage(specPath, el, loadingClass, $container, routerOptions, context))
