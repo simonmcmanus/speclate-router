@@ -16,6 +16,8 @@ module.exports = function (routerOptions, speclateOptions) {
   page('*', function (context, next) {
     el.classList.add(loadingClass)
 
+    routerOptions.preFetch && routerOptions.preFetch($container)
+
     var routeName = context.pathname.slice(0, -5)
     if (routeName === '') {
       routeName = '/index'
