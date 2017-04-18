@@ -10,19 +10,20 @@ module.exports = function (routerOptions, speclateOptions) {
   routerOptions = routerOptions || {}
   var $container = $(speclateOptions.container || '#container')
   var loadingClass = routerOptions.loadingClass || 'loading'
+  var el = document.querySelector('html')
+  el.classList.add(loadingClass)
 
   page('*', function (context, next) {
+    el.classList.add(loadingClass)
+
     var routeName = context.pathname.slice(0, -5)
     if (routeName === '') {
       routeName = '/index'
     }
     var specPath = '/api/speclate' + routeName + '.json'
-    if (!context.init) {
-      $container.empty()
-    }
 
-    var el = document.querySelector('html')
-    el.classList.add(loadingClass)
+
+
     el.setAttribute('data-speclate-url', context.pathname)
 
     if (requests) {

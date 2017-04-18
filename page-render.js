@@ -25,7 +25,6 @@ module.exports = function ($container, page, options, active, callback) {
       }
     }
   }, function (err, data) {
-
     if (!active) {
       return
     }
