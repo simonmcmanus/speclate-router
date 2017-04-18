@@ -10,7 +10,6 @@ module.exports = function (specPath, htmlEl, loadingClass, $container, routerOpt
       return
     }
     if (err) {
-      $container.removeClass(loadingClass)
       htmlEl.classList.remove(loadingClass)
       return routerOptions.error(err, $container)
     }
