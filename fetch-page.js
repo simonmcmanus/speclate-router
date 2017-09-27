@@ -6,7 +6,6 @@ module.exports = function (specPath, htmlEl, loadingClass, $container, routerOpt
   var active = true
 
   fetchJson(specPath, function (err, pageSpec) {
-
     // should carry on rendering without waiting for json to come back.
     if (!active) {
       return

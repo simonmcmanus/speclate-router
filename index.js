@@ -24,8 +24,6 @@ module.exports = function (routerOptions, speclateOptions) {
     }
     var specPath = '/api/speclate' + routeName + '.json'
 
-
-
     el.setAttribute('data-speclate-url', context.pathname)
 
     if (requests) {

@@ -11,7 +11,6 @@ var loadComponents = require('speclate/lib/page/load-components')
  * used for client side render.
  */
 module.exports = function ($container, page, options, active, callback) {
-
   asyncParallel({
     pageLayout: function (next) {
       var pageLayoutPath = '/pages/' + page.page + '/' + page.page + '.html'
