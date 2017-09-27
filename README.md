@@ -1,4 +1,4 @@
-#speclate-router
+# speclate-router
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/simonmcmanus/speclate-router.svg)](https://greenkeeper.io/)
 
@@ -6,7 +6,7 @@ Client side router for speclate.
 
 Given a speclate spec (github.com/simonmcmanus/speclate) Generates a page.js router:
 
-#Example
+# Example
 
 ```js
 var router = require('speclate-router');
@@ -32,7 +32,7 @@ router(spec, {
 ```
 
 
-#Notes
+# Notes
 
 * / gets replaces for /index.html
 
