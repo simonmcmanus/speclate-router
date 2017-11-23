@@ -31,6 +31,15 @@ module.exports = {
       .url('http://localhost:5004')
       .waitForElementVisible('body', 1000)
       .end()
-  }
+  },
 
+  'works with directory in the url': function (browser) {
+    browser
+      .url('http://localhost:5004/slides/bacon.html')
+      .waitForElementVisible('body', 1000)
+      .assert.containsText('#container', 'bacon is great')
+      .url('http://localhost:5004')
+      .waitForElementVisible('body', 1000)
+      .end()
+  }
 }
