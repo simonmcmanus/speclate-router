@@ -2,7 +2,7 @@
 
 var page = require('page')
 
-var FetchPage = require('./fetch-page')
+var FetchPage = require('./lib/fetch-page')
 var SpecFromRoute = require('./lib/spec-from-route')
 var requests = []
 

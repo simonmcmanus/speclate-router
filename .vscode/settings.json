@@ -1,6 +1,5 @@
 {
   "standard.enable": true,
   "editor.tabSize": 2,
-  "npm.runInTerminal": false,
-  "standard.options": { "globals": ["fetch", "caches"]}
+  "npm.runInTerminal": false
 }
