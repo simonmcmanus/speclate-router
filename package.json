@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test-setup": "npm run test-server",
-    "test": "npm run nightwatch && npm run lint",
+    "test": "npm run unit && npm run nightwatch && npm run lint",
     "unit": "jasmine",
     "lint": "standard",
     "test-build-client-side": "./node_modules/browserify/bin/cmd.js tests/sample/client/router.js > tests/sample/client/router-compiled.js",
