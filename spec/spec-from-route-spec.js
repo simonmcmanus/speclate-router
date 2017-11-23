@@ -1,0 +1,32 @@
+
+var specFromRoute = require('../lib/spec-from-route')
+
+describe('SpecFromRoute', function () {
+
+  describe('Given a full  url string', () => {
+
+
+    var pathName = '/bacon.html'
+    var expectedOut = '/api/speclate/bacon.json'
+    var specPath = specFromRoute(pathName)
+
+     it('should result in ' + expectedOut, function () {
+
+      expect(specPath).toEqual(expectedOut)
+     })
+  })
+
+
+
+  describe('Given a a url ending with a forward slash', () => {
+
+      var pathName = '/bacon/'
+      var expectedOut = '/api/speclate/bacon/index.json'
+      var specPath = specFromRoute(pathName)
+
+        it('should result in ' + expectedOut, function () {
+
+        expect(specPath).toEqual(expectedOut)
+        })
+    })
+})

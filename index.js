@@ -3,6 +3,7 @@
 var page = require('page')
 
 var FetchPage = require('./fetch-page')
+var SpecFromRoute = require('./lib/spec-from-route')
 var requests = []
 
 module.exports = function (routerOptions, speclateOptions) {
@@ -17,12 +18,7 @@ module.exports = function (routerOptions, speclateOptions) {
     el.classList.add(loadingClass)
 
     routerOptions.preFetch && routerOptions.preFetch($container)
-
-    var routeName = context.pathname.slice(0, -5)
-    if (routeName === '') {
-      routeName = '/index'
-    }
-    var specPath = '/api/speclate' + routeName + '.json'
+    var specPath = SpecFromRoute(context.pathname)
 
     el.setAttribute('data-speclate-url', context.pathname)
 
