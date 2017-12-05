@@ -23,7 +23,7 @@
   "devDependencies": {
     "browserify": "14.x.x",
     "jquery": "3.x.x",
-    "nightwatch": "0.x.x",
+    "nightwatch": "^0.9.19",
     "standard": "10.x.x"
   },
   "standard": {
