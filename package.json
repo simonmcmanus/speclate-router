@@ -22,7 +22,7 @@
     "speclate-fetch": "2.x.x"
   },
   "devDependencies": {
-    "browserify": "14.x.x",
+    "browserify": "^15.1.0",
     "jquery": "3.x.x",
     "nightwatch": "0.x.x",
     "standard": "10.x.x"
