@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "async.parallel": "0.5.2",
-    "page": "1.x.x",
+    "page": "^1.8.0",
     "sizlate": "2.x.x",
     "speclate": "14.x.x",
     "speclate-fetch": "2.x.x"
