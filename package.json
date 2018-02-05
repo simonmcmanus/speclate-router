@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "browserify": "14.x.x",
+    "jasmine": "^2.9.0",
     "jquery": "3.x.x",
     "nightwatch": "0.x.x",
     "standard": "10.x.x"
