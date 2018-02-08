@@ -14,8 +14,9 @@ after_install:
 before_script:
   - chmod 0777 ./tests/e2e/nightwatch.js
   - mkdir ./tests/sample/docs
-  - npm run test-server &
+  - selenium-server
   - "sleep 10"
+
 
 script:
   - npm run test
