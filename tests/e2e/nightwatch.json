@@ -9,7 +9,7 @@
     "start_process" : true,
     "server_path" : "./tests/e2e/selenium-server-standalone-2.44.0.jar",
     "host" : "127.0.0.1",
-    "port" : 4444,
+    "port" : 4445,
     "cli_args" : {
     }
   },
@@ -17,7 +17,7 @@
   "test_settings" : {
     "default" : {
       "launch_url" : "http://localhost:3000",
-      "selenium_port"  : 4444,
+      "selenium_port"  : 4445,
       "selenium_host"  : "localhost",
       "pathname": "/wd/hub",
       "silent" : true,
