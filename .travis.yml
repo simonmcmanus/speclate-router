@@ -15,7 +15,7 @@ before_script:
   - chmod 0777 ./tests/e2e/nightwatch.js
   - mkdir ./tests/sample/docs
   - npm run test-server &
-  - "sleep 10"
+  - "sleep 100"
 
 
 script:
