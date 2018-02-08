@@ -10,6 +10,7 @@
     "host" : "127.0.0.1",
     "port" : 4444,
     "cli_args" : {
+            "webdriver.chrome.driver": "./tests/e2e/chromedriver"
     }
   },
   "test_settings" : {
@@ -39,6 +40,8 @@
       }
     },
     "chrome" : {
+
+      "baseURL": "http: //chromedriver.storage.googleapis.com",
       "desiredCapabilities": {
         "browserName":  "chrome",
         "javascriptEnabled": true,
