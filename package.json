@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test-setup": "npm run test-server",
-    "test": "npm run unit && npm run nightwatch && npm run lint",
+    "test": "npm run unit && npm run testcafe && npm run lint",
     "unit": "jasmine",
     "lint": "standard",
     "test-build-client-side": "./node_modules/browserify/bin/cmd.js tests/sample/client/router.js > tests/sample/client/router-compiled.js",
     "test-server": "npm run test-build-client-side && cd tests/sample/ && speclate --build && speclate --dev 5004",
-    "nightwatch": "tests/e2e/nightwatch.js --config tests/e2e/nightwatch.json"
+    "nightwatch": "tests/e2e/nightwatch.js --config tests/e2e/nightwatch.json",
+    "testcafe": "./node_modules/.bin/testcafe chrome,firefox tests/testcafe/index-test.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +20,8 @@
     "page": "1.x.x",
     "sizlate": "2.x.x",
     "speclate": "14.x.x",
-    "speclate-fetch": "2.x.x"
+    "speclate-fetch": "2.x.x",
+    "testcafe": "^0.18.6"
   },
   "devDependencies": {
     "browserify": "14.x.x",
