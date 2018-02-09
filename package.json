@@ -38,7 +38,9 @@
       "before",
       "beforeEach",
       "expect",
-      "it"
+      "it",
+      "test",
+      "fixture"
     ],
     "ignore": [
       "client",
