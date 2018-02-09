@@ -19,7 +19,7 @@
     "async.parallel": "0.5.2",
     "page": "1.x.x",
     "sizlate": "2.x.x",
-    "speclate": "14.x.x",
+    "speclate": "17.x.x",
     "speclate-fetch": "2.x.x",
     "testcafe": "^0.18.6"
   },
