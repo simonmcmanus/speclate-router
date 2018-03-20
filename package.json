@@ -11,7 +11,8 @@
     "test-build-client-side": "./node_modules/browserify/bin/cmd.js tests/sample/client/router.js > tests/sample/client/router-compiled.js",
     "test-server": "npm run test-build-client-side && cd tests/sample/ && speclate --build && speclate --dev 5004",
     "nightwatch": "tests/e2e/nightwatch.js --config tests/e2e/nightwatch.json",
-    "testcafe": "./node_modules/.bin/testcafe chrome,firefox tests/testcafe/index-test.js"
+    "testcafe": "./node_modules/.bin/testcafe chrome tests/testcafe/index-test.js",
+    "testcafe-all": "./node_modules/.bin/testcafe chrome,firefox tests/testcafe/index-test.js"
   },
   "author": "",
   "license": "ISC",
