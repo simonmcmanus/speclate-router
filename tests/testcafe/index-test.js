@@ -1,18 +1,30 @@
 
 import { Selector } from 'testcafe'
 
+const container = Selector('#container')
+
 fixture`Getting Started`
   .page`http://localhost:5004`
 
-test('My first test', async t => {
+test('load homepage', async t => {
+
   await t
-    .click('.contact')
+    .expect(container.textContent).eql('home')
+})
 
+test('ensure html attributes are set', async t => {
 
-  const container = Selector('#container');
+  await t
+    .expect(Selector('html').getAttribute('data-speclate-url')).eql('/')
+    .expect(Selector('html').getAttribute('data-speclate-page')).eql('home')
+})
 
-  //await  container.contains('Home page')
+test('click on contact and ensure page is updated', async t => {
 
-
-  await t.expect(container).eql('Home page')
+  await t
+    .click(Selector('.contact'))
+    .wait(500)
+    .expect(container.textContent).eql('contact')
+    .expect(Selector('html').getAttribute('data-speclate-url')).eql('/contact.html')
+    .expect(Selector('html').getAttribute('data-speclate-page')).eql('contact')
 })
