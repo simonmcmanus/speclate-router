@@ -7,5 +7,12 @@ fixture`Getting Started`
 test('My first test', async t => {
   await t
     .click('.contact')
-    .expect(Selector('#container')).contains('Home page');
+
+
+  const container = Selector('#container');
+
+  //await  container.contains('Home page')
+
+
+  await t.expect(container).eql('Home page')
 })
