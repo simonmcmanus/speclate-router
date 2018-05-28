@@ -9,18 +9,25 @@ var requests = []
 module.exports = function (routerOptions, speclateOptions) {
   speclateOptions = speclateOptions || {}
   routerOptions = routerOptions || {}
-  var $container = $(speclateOptions.container || '#container')
   var loadingClass = routerOptions.loadingClass || 'loading'
-  var el = document.querySelector('html')
-  el.classList.add(loadingClass)
+  const selectors = {
+    html: 'html',
+    container: speclateOptions.container || '#container'
+  }
+
+  const elements = {
+    $html: $(selectors.html),
+    $container: $(selectors.container)
+  }
+  elements.$html.addClass(loadingClass)
 
   page('*', function (context, next) {
-    el.classList.add(loadingClass)
+    elements.$html.addClass(loadingClass)
 
-    routerOptions.preFetch && routerOptions.preFetch($container)
+    routerOptions.preFetch && routerOptions.preFetch(elements.$container)
     var specPath = SpecFromRoute(context.pathname)
 
-    el.setAttribute('data-speclate-url', context.pathname)
+    elements.$html.attr('data-speclate-url', context.pathname)
 
     if (requests) {
       requests.forEach(function (req) {
@@ -29,7 +36,9 @@ module.exports = function (routerOptions, speclateOptions) {
       requests = []
     }
 
-    requests.push(new FetchPage(specPath, el, loadingClass, $container, routerOptions, context))
+    // check the spec here to see what strategy it should be using.
+
+    requests.push(new FetchPage(specPath, elements, selectors, loadingClass, routerOptions, context))
   })
   page()
 }
