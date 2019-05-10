@@ -13,7 +13,7 @@ test('load homepage', async t => {
 
 test('ensure html attributes are set', async t => {
   await t
-    .expect(Selector('html').getAttribute('data-speclate-url')).eql('/')
+    .expect(Selector('html').getAttribute('data-speclate-url')).eql('/index.html')
     .expect(Selector('html').getAttribute('data-speclate-page')).eql('home')
 })
 
