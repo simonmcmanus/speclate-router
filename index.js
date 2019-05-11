@@ -35,9 +35,7 @@ var pageChange = function (newLocation, selectors, elements, routerOptions) {
 
   requests.push(new FetchPage(specPath, elements, selectors, loadingClass, routerOptions))
 }
-
 var setupLinks = function (routerOptions, selectors, elements) {
-
   var links = document.getElementsByTagName('a')
   for (var i = 0; i < links.length; i++) {
     // TODO: handle touch events here.
