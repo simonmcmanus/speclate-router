@@ -4,7 +4,7 @@ var FetchPage = require('./lib/fetch-page')
 var SpecFromRoute = require('./lib/spec-from-route')
 var requests = []
 
-var onClick = function (selectors, elements, routerOptions, speclateOptions) {
+var onClick = function (selectors, elements, routerOptions) {
   return function (e) {
     const link = e.currentTarget
     const newLocation = link.getAttribute('href')
@@ -14,12 +14,12 @@ var onClick = function (selectors, elements, routerOptions, speclateOptions) {
       var state = {}
       var stateName = ''
       window.history.pushState(state, stateName, newLocation)
-      pageChange(selectors, newLocation, elements, routerOptions, speclateOptions)
+      pageChange(newLocation, selectors, elements, routerOptions)
     }
   }
 }
 
-var pageChange = function (selectors, newLocation, elements, routerOptions, speclateOptions) {
+var pageChange = function (newLocation, selectors, elements, routerOptions) {
   var loadingClass = routerOptions.loadingClass || 'loading'
   elements.html.classList.add(loadingClass)
   routerOptions.preFetch && routerOptions.preFetch(elements.container)
@@ -33,11 +33,29 @@ var pageChange = function (selectors, newLocation, elements, routerOptions, spec
     requests = []
   }
 
-  // check the spec here to see what strategy it should be using.
   requests.push(new FetchPage(specPath, elements, selectors, loadingClass, routerOptions))
 }
 
-var setupLinks = function (routerOptions, speclateOptions) {
+var setupLinks = function (routerOptions, selectors, elements) {
+
+  var links = document.getElementsByTagName('a')
+  for (var i = 0; i < links.length; i++) {
+    // TODO: handle touch events here.
+    // TODO:  could check here if the link is listed in the spec
+    links[i].addEventListener('click', onClick(selectors, elements, routerOptions), { capture: false })
+  }
+}
+
+var doPopState = function (routerOptions, selectors, elements) {
+  return function (event) {
+    pageChange(document.location.pathname, selectors, elements, routerOptions)
+  }
+}
+
+module.exports = function (routerOptions, speclateOptions) {
+  speclateOptions = speclateOptions || {}
+  routerOptions = routerOptions || {}
+
   const selectors = {
     html: 'html',
     container: speclateOptions.container || '#container'
@@ -48,18 +66,7 @@ var setupLinks = function (routerOptions, speclateOptions) {
     container: document.querySelector(selectors.container)
   }
 
-  // TODO - this could be loaded from the spec, ideally bound as the domNode is created.
-  var links = document.getElementsByTagName('a')
-  for (var i = 0; i < links.length; i++) {
-    // TODO:  could check here if the link is listed in the spec
-    links[i].addEventListener('click', onClick(selectors, elements, routerOptions, speclateOptions), { capture: false })
-  }
-}
-
-module.exports = function (routerOptions, speclateOptions) {
-  speclateOptions = speclateOptions || {}
-  routerOptions = routerOptions || {}
-
-  document.addEventListener('DOMContentLoaded', setupLinks(routerOptions, speclateOptions), false)
-  // TODO: add mechanism to remove listener
+  document.addEventListener('DOMContentLoaded', setupLinks(routerOptions, selectors, elements), false)
+  window.addEventListener('popstate', doPopState(routerOptions, selectors, elements))
+  // TODO: add mechanism to remove listeners
 }
